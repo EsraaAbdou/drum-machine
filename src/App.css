@@ -1,0 +1,22 @@
+#drum-machine {
+    width: 80%;
+    padding: 1rem;
+}
+
+@media (min-width: 576px) {
+    #drum-machine {
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    #drum-machine {
+        padding: 3rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    #drum-machine {
+        width: 35%;
+    }
+}

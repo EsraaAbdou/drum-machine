@@ -33,23 +33,21 @@ class App extends React.Component {
 
   render(){ 
     const keys = KEYS.map(key =>
-      <div key={key.key} className="col-4">
-        <div className="col">
+      <div key={key.key} className="col-6 col-sm-4 text-center">
+        {/* <div className="col"> */}
           <DrumPad content={key.key} src={key.src} name={key.name} playAudio={this.playAudio} />
-        </div>
+        {/* </div> */}
       </div>); 
     return (
-      <div className="d-flex h-100 align-items-center">
-        <div className="container p-5 w-50 my-0 mx-auto bg-info" id="drum-machine">
-          <div className="row">
-            <div className="col-9">
-              <div className="row">
-                {keys}
+      <div className="d-flex h-100 align-items-center justify-content-center">
+        <div className="bg-info" id="drum-machine">
+          <div className="row justify-content-center mb-4">
+              <div id="display" className="text-light font-weight-bold bg-secondary text-center w-50 p-3">
+                {this.state.display}
               </div>
-            </div>
-            <div className="col-3 d-flex align-items-center">
-              <div id="display" className="text-light font-weight-bold bg-secondary text-center w-100 p-3">{this.state.display}</div>
-            </div>
+          </div>
+          <div className="row">
+            {keys}
           </div>
         </div>
       </div>
